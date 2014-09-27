@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>FIFF</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css" />
+        <link rel="stylesheet" href="css/reset.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <!-- jQuery -->
+        <script src="js/libs/jquery.min.js"></script>
+        <script src="js/libs/jquery.mobile.min.js"></script>
+        <!-- Location -->
+        <script src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en" type="text/javascript"></script>
+        <script src="js/libs/gmap3.js"></script>
+        <!-- Backbone -->
+        <script src="js/libs/underscore-min.js"></script>
+        <script src="js/libs/backbone-min.js"></script>
+        <script src="js/libs/backbone.localStorage-min.js"></script>
+        <!-- PhoneGap -->
+        <script src="phonegap.js"></script>
+        <!-- models -->
+        <script src="js/models/film.js"></script>
+        <script src="js/models/session.js"></script>
+        <script src="js/models/block.js"></script>
+        <script src="js/models/favorite.js"></script>
+        <!-- myFile -->
+        <script src="js/main.js"></script>
+        <script src="js/film.js"></script>
+        <script src="js/plan.js"></script>
+        <script src="js/fav.js"></script>
+        <script src="js/alpha.js"></script>
+        <script src="js/search.js"></script>
+        <script src="js/actu.js"></script>
+        <script src="js/pros.js"></script>
+        <script src="js/contact.js"></script>
+    </head>
+    <body lang="fr">
+
+        <!-- Start indexPage -->
+        <div id="container" data-role="page" class="index-page">
+
+            <div data-role="panel" id="mypanel" data-position="right" data-display="reveal">
+                <div class="menu-wrapper">
+                    <ul class="menu">
+                        <li><a href="index.html" class="menu-index active" data-role="none" data-transition="slide" data-inline="true">Programme</a></li>
+                        <li><a href="alpha.html" class="menu-alpha" data-role="none" data-transition="slide" data-inline="true">Les films</a></li>
+                        <li><a href="fav.html" class="menu-fav" data-role="none" data-transition="slide" data-inline="true">Mon festival</a></li>
+                        <li><a href="actu.html" class="menu-actu" data-role="none" data-transition="slide" data-inline="true">Blog</a></li>
+                        <li><a href="infos.html" class="menu-infos" data-role="none" data-transition="slide" data-inline="true">Infos pratiques</a></li>
+                        <li><a href="pros.html" class="menu-pros" data-role="none" data-transition="slide" data-inline="true">Espace pro</a></li>
+                        <li>
+                            <fieldset>
+                                <form method="POST" action="javascript:search('index')">
+                                    <input class="search" name="search" type="text" placeholder="Rechercher..." />
+                                    <input class="submit" name="submit" type="submit" value="Submit" />
+                                </form>
+                            </fieldset>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- /panel -->
+
+            <div id="header" data-role="header" data-position="fixed">
+                <h1>Programme</h1>
+                <a href="#mypanel" class="menu-a" data-role="none"><nav></nav></a>
+            </div>
+
+            <div id="content" class="content-index" data-role="content">
+                <section class="day" id="27">	
+                    <header>
+                        <ul class="film-day">
+                            <li id="previous-day"><a href="#" class="previous-day"><img src="img/left-arrow-pink.png" alt="left-arrow" width="16" height="25"></a></li>
+                            <li><h1 id="date_today"></h1></li>
+                            <li id="next-day"><a href="#" class="next-day"><img src="img/right-arrow-pink.png" alt="right-arrow" width="16" height="25"></a></li>
+                        </ul>
+                    </header>
+                    <div id="film-list"></div>
+                </section>
+
+            </div>
+
+        </div>
+        <!-- End indexPage -->
+
+    </body>
+</html>

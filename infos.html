@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <title>FIFF</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css" />
+        <link rel="stylesheet" href="css/reset.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    <body lang="fr">
+
+        <!-- Start indexPage -->
+        <div id="container" data-role="page" class="infos-page">
+
+            <div data-role="panel" id="mypanel" data-position="right" data-display="reveal">
+                <div class="menu-wrapper">
+                    <ul class="menu">
+                        <li><a href="index.html" class="menu-index" data-role="none" data-transition="slide" data-inline="true">Programme</a></li>
+                        <li><a href="alpha.html" class="menu-alpha" data-role="none" data-transition="slide" data-inline="true">Les films</a></li>
+                        <li><a href="fav.html" class="menu-fav" data-role="none" data-transition="slide" data-inline="true">Mon festival</a></li>
+                        <li><a href="actu.html" class="menu-actu" data-role="none" data-transition="slide" data-inline="true">Blog</a></li>
+                        <li><a href="infos.html" class="menu-infos active" data-role="none" data-transition="slide" data-inline="true">Infos pratiques</a></li>
+                        <li><a href="pros.html" class="menu-pros" data-role="none" data-transition="slide" data-inline="true">Espace pro</a></li>
+                        <li>
+                            <fieldset>
+                                <form method="POST" action="javascript:search('infos')">
+                                    <input class="search" name="search" type="text" placeholder="Rechercher..." />
+                                    <input class="submit" name="submit" type="submit" value="Submit" />
+                                </form>
+                            </fieldset>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- /panel -->
+
+            <div id="header" data-role="header" data-position="fixed">
+                <h1>Infos pratiques</h1>
+                <a href="#mypanel" class="menu-a" data-role="none"><nav></nav></a>
+            </div>
+
+            <div id="content" data-role="content">	
+                <section class="day">
+
+                    <div class="info-list">
+                        <a href="plan.html" class="practical" data-role="none" data-transition="slide" data-inline="true">
+                            <p>Plan</p>
+                        </a>
+                        <a href="tarifs.html" class="practical" data-role="none" data-transition="slide" data-inline="true">
+                            <p>Tarifs</p>
+                        </a>
+                        <a href="contact.html" class="practical" data-role="none" data-transition="slide" data-inline="true">
+                            <p>Contact</p>
+                        </a>
+                        <a href="legende.html" class="practical" data-role="none" data-transition="slide" data-inline="true">
+                            <p>Légendes</p>
+                        </a>
+                    </div>
+
+                </section>
+            </div>
+
+        </div>
+        <!-- End indexPage -->
+
+    </body>
+</html>
